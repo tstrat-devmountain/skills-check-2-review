@@ -16,11 +16,11 @@ export default class Form extends Component {
     // post new product to db
 
     // clear input boxes
-    
+
     render() {
         return (
             <div className='form'>
-            
+                Form
             </div>
         );
     }

@@ -12,15 +12,15 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 }).catch (err => console.log('An Error occurred while attempting to connect to the database'));
 
 
-
-
-
-
-// Endpoints
+/* ------  Endpoints ------ */
 
 // GET /api/inventory
 
 // POST /api/product
+
+// PUT /api/inventory/:id
+
+// DELETE /api/inventory/:id
 
 
 const port = process.env.SERVER_PORT || 4050;
