@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const massive = require('massive')
 require('dotenv').config()
-
+const productsController = require('./controllers/productsController');
 const app = express();
 app.use(bodyParser.json());
 
@@ -15,12 +15,18 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => {
 /* ------  Endpoints ------ */
 
 // GET /api/inventory
+app.get('/api/inventory', productsController.getInventory);
 
-// POST /api/product
+app.get('/api/inventory/:id', productsController.getOne)
 
-// PUT /api/inventory/:id
 
-// DELETE /api/inventory/:id
+// POST /api/products
+app.post('/api/products', productsController.addProduct);
+
+// PUT /api/products/:id
+app.put('/api/products', productsController.editProduct)
+// DELETE /api/product/:id
+app.delete('/api/products/:id', productsController.deleteProduct);
 
 
 const port = process.env.SERVER_PORT || 4050;
