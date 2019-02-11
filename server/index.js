@@ -29,6 +29,6 @@ app.put('/api/products', productsController.editProduct)
 app.delete('/api/products/:id', productsController.deleteProduct);
 
 
-const port = process.env.SERVER_PORT || 4050;
+const PORT = process.env.SERVER_PORT || 4050;
 
-app.listen(port, () => console.log(`Server is up on port: ${port}.  Don't spook the monkey 🙉`));
+app.listen(PORT, () => console.log(`Server is up on port: ${PORT}.  Don't spook the monkey 🙉`));

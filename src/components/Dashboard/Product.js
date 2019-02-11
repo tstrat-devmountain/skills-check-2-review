@@ -2,7 +2,6 @@ import React from 'react';
 import './product.css';
 
 const Product = ({ product, deleteProductFn, selectProductFn }) => {
-    console.log(product);
     return (
         <div className='product'>
             <img src={product.img} alt='product' />
