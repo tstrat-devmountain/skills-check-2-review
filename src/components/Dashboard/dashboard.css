@@ -1,0 +1,16 @@
+.couch {
+  width: 400px;
+  border: 1px solid black;
+}
+
+.couch > img {
+  height: 200px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
